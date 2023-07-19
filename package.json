@@ -1,0 +1,69 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "codementor",
+  "title": "Codementor",
+  "description": "Codementor extension for Raycast",
+  "icon": "extension_icon.png",
+  "author": "anwarulislam",
+  "categories": [
+    "Web",
+    "Communication",
+    "News"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "open-requests",
+      "title": "Open Requests",
+      "subtitle": "Codementor",
+      "description": "Show all open requests",
+      "mode": "view"
+    },
+    {
+      "name": "my-schedules",
+      "title": "Codementor Schedules",
+      "subtitle": "Codementor",
+      "description": "Show all my codementor schedules",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "description": "Codementor ACCESS_TOKEN Cookie Key. You can find it in your browser's cookie storage. It should be named `ACCESS_TOKEN`.",
+      "name": "ACCESS_TOKEN",
+      "required": true,
+      "title": "Access Token",
+      "type": "password"
+    },
+    {
+      "description": "Codementor REFRESH_TOKEN Cookie Key. You can find it in your browser's cookie storage. It should be named `REFRESH_TOKEN`.",
+      "name": "REFRESH_TOKEN",
+      "required": true,
+      "title": "Refresh Token",
+      "type": "password"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.55.2",
+    "@raycast/utils": "^1.8.0",
+    "@types/node-fetch": "^2.6.4",
+    "axios": "^1.4.0",
+    "date-fns": "^2.30.0",
+    "node-fetch": "^3.3.1"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "1.0.5",
+    "@types/node": "18.8.3",
+    "@types/react": "18.0.9",
+    "eslint": "^7.32.0",
+    "prettier": "^2.5.1",
+    "typescript": "^4.4.3"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "publish": "npx @raycast/api@latest publish"
+  }
+}
