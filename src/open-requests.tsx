@@ -10,6 +10,10 @@ const filters = [
     value: "related",
   },
   {
+    label: "My interested requests",
+    value: "interested",
+  },
+  {
     label: "Others",
     value: "other",
   },
